@@ -1,0 +1,226 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Halant", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Menu de navegação */
+header {
+    background-color: #D9D9D9;
+    width: 100%; /* Faz o menu ocupar a largura total da página */
+}
+
+/* Menu principal */
+#main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20rem;
+    flex-wrap: wrap; /* Adiciona flexibilidade para telas menores */
+}
+
+.logo-container:hover {
+    color: #D9D9D9;
+}
+
+/* Logo */
+.logo-container {
+    background-color: #F13005;
+    width: 50px;
+    height: 50px;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* Navegação */
+.nav-links {
+    list-style: none;
+    display: flex; /* Mantém os itens um do lado do outro */
+    flex-direction: row; /* Garante que fiquem em linha */
+    flex-wrap: nowrap; /* Impede que empilhem em várias linhas */
+}
+
+.nav-item {
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 50px;
+    
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #0D0D0D;
+    font-size: 1rem;
+}
+
+.nav-item a:hover {
+    color: #F13005;
+}
+
+/* Logo e menu para telas menores */
+@media (max-width: 768px) {
+    #main-menu {
+        flex-direction: column; /* Coloca logo em cima e menu abaixo */
+        padding: 1rem 2rem;
+        text-align: center;
+    }
+
+    /* Logo centralizada */
+    .logo-container {
+        margin-bottom: 1rem; /* Adiciona espaçamento entre logo e menu */
+    }
+
+    /* Menu com itens sempre em linha */
+    .nav-links {
+        flex-direction: row;
+        justify-content: center; /* Centraliza o menu */
+        flex-wrap: wrap; /* Garante que, se necessário, os itens se reorganizem sem empilhar */
+    }
+
+    .nav-item {
+        margin: 10px; /* Adiciona mais espaçamento entre os itens */
+    }
+}
+
+/* Ajuste para alinhamento em telas de 380px */
+@media (max-width: 380px) {
+    .nav-links {
+        flex-wrap: wrap; /* Permite reorganizar os itens em linha */
+        justify-content: space-evenly; /* Garante que fiquem bem distribuídos na linha */
+    }
+
+    .nav-item {
+        flex: 1 1 100px; /* Garante que cada item ocupe o espaço necessário */
+        max-width: 100px; /* Define uma largura máxima para os itens */
+        text-align: center;
+    }
+}
+
+/* Seções de tela cheia */
+.section-fullscreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Estilo para a Página Inicial */
+#home {
+    background-color: #D9D9D9;
+    color: #0D0D0D;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Coloca o conteúdo em coluna */
+    height: 100vh; /* Garante que a seção ocupe a tela inteira */
+}
+
+.home-title h1 {
+    font-size: 50px;
+    color: #0D0D0D;
+    margin-bottom: 5px;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%; /* Ajusta a largura da imagem em telas menores */
+    max-width: 500px; /* Limita o tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    background-color: transparent;  /* Fundo transparente */
+    border: 5px solid #f13005;      /* Borda vermelha de 5px */
+    display: flex;
+    justify-content: center; /* Garante que a imagem seja centralizada */
+    align-items: center;      /* Centraliza verticalmente */
+}
+
+.home-banner {
+    width: 100%; /* Faz a imagem ocupar 100% do espaço disponível */
+    height: auto; /* Mantém a proporção */
+    display: block; /* Remove o comportamento inline da imagem que pode causar o espaço */
+    margin: 0; /* Remove qualquer margem indesejada */
+}
+
+.home-text {
+    font-size: 20px;
+    color: #0D0D0D;
+    text-align: center;
+}
+
+/* Seção Sobre */
+#sobre {
+    background-color: #0D0D0D;
+    color: #D9D9D9;
+}
+
+#sobre .section-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#sobre .section-description {
+    font-size: 18px;
+    max-width: 700px;
+    text-align: center;
+}
+
+/* Seção Projetos */
+#projetos {
+    background-color: #D9D9D9;
+    color: #0D0D0D;
+}
+
+#projetos .section-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#projetos .section-description {
+    font-size: 18px;
+    max-width: 700px;
+    text-align: center;
+}
+
+/* Seção Experiência */
+#experiencia {
+    background-color: #0D0D0D;
+    color: #D9D9D9;
+}
+
+#experiencia .section-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#experiencia .section-description {
+    font-size: 18px;
+    max-width: 700px;
+    text-align: center;
+}
+
+/* Seção Contato (Rodapé) */
+#contato {
+    background-color: #0D0D0D;
+    color: #D9D9D9;
+}
+
+#contato .section-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#contato .section-description {
+    font-size: 18px;
+    max-width: 700px;
+    text-align: center;
+}
